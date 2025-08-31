@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Copy, RefreshCw, Shield } from "lucide-react";
-import "./App.css";
 
 const Toast = ({
   message,
