@@ -202,7 +202,7 @@ export default function App() {
               <label className="font-medium text-sm" htmlFor="password-output">
                 Your Password:
               </label>
-              <div className="flex justify-between gap-2">
+              <div className="flex flex-col sm:flex-row justify-between gap-2">
                 <input
                   id="password-output"
                   value={password}
@@ -211,12 +211,12 @@ export default function App() {
                   className="text-black font-extrabold flex-grow placeholder:font-mono placeholder:text-sm placeholder:font-extralight"
                 />
                 <button
-                  className="flex items-center gap-2 bg-gray-600 hover:not-disabled:bg-gray-700 stroke-white rounded-xl p-3 md:p-4 disabled:opacity-35"
+                  className="flex text-white items-center justify-center gap-2 bg-gray-600 hover:not-disabled:bg-gray-700 stroke-white rounded-xl p-2 sm:p-4 disabled:opacity-35"
                   onClick={copyToClipboard}
                   disabled={!password}
                 >
-                  <Copy className="h-4 w-4 text-white" />
-                  <span className="sr-only">Copy it</span>
+                  <Copy className="h-4 w-4" />
+                  <span className="sm:sr-only">Copy it</span>
                 </button>
               </div>
               {password ? (
@@ -339,7 +339,7 @@ export default function App() {
                   Exclude Similar Characters (i, l, 1, L, o, 0, O)
                 </label>
                 <Switch.Root
-                  className="relative h-[25px] w-[42px] bg-gray-300 data-[state=checked]:bg-gray-700 rounded-full shadow-2xl"
+                  className="shrink-0 relative h-[25px] w-[42px] bg-gray-300 data-[state=checked]:bg-gray-700 rounded-full shadow-2xl"
                   id="exclude-similar"
                   name="exclude-similar"
                   value="exclude-similar"
